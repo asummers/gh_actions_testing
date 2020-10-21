@@ -1,7 +1,7 @@
 defmodule GhActionsTesting.MixProject do
   use Mix.Project
 
-  @version "0.0.1"
+  @version "0.1.0"
   @repo_url "https://github.com/asummers/gh_actions_testing"
 
   def project do
