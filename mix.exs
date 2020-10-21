@@ -1,7 +1,7 @@
 defmodule GhActionsTesting.MixProject do
   use Mix.Project
 
-  @version "0.0.1"
+  @version "0.1.1"
   @repo_url "https://github.com/asummers/gh_actions_testing"
 
   def project do
@@ -55,7 +55,7 @@ defmodule GhActionsTesting.MixProject do
       main: "readme",
       source_url: @repo_url,
       homepage_url: @repo_url,
-      extras: ["README.md", "CHANGELOG.md"]
+      extras: ["README.md"]
     ]
   end
 
