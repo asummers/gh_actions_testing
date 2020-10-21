@@ -8,7 +8,12 @@ git config --local user.name "github-actions[bot]"
 
 OLD_CHANGELOG=$(cat CHANGELOG.md)
 
-echo y | mix git_ops.release
+if test -f CHANGELOG.md
+then
+    echo y | mix git_ops.release
+else
+    echo y | mix git_ops.release --initial
+fi
 
 git push --follow-tags
 
