@@ -6,12 +6,12 @@ IFS=$'\n\t'
 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
 git config --local user.name "github-actions[bot]"
 
-OLD_CHANGELOG=$(cat CHANGELOG.md)
-
 if test -f CHANGELOG.md
 then
+    OLD_CHANGELOG=$(cat CHANGELOG.md)
     echo y | mix git_ops.release
 else
+    OLD_CHANGELOG=""
     echo y | mix git_ops.release --initial
 fi
 
